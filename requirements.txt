@@ -1,0 +1,10 @@
+requests==2.25.1
+dataclasses_json==0.5.2
+
+numpy==1.21.4
+Pillow==8.3.2
+scipy==1.7.3
+pandas==1.3.4
+scikit-learn==1.0.1
+
+pysen[lint]==0.10.1

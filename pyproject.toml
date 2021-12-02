@@ -1,0 +1,15 @@
+[tool.pysen]
+version = "0.10"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = true
+line_length = 120
+
+[[tool.pysen.lint.mypy_targets]]
+paths = ["."]
+
+[mypy]
+# plugins = numpy.typing.mypy_plugin
