@@ -38,7 +38,7 @@ def get_video_list(playlist: Playlist) -> List[YoutubeVideoItem]:
         sum += len(data["items"])
         print(
             f"retrieved a page successfully. num of items in this page: {len(data['items'])}, "
-            + "(sum:{sum} / total:{data['pageInfo']['totalResults']})"
+            + f"(sum:{sum} / total:{data['pageInfo']['totalResults']})"
         )
 
         video_list = video_list + list(map(YoutubeVideoItem.from_response, data["items"]))

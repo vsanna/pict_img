@@ -18,24 +18,24 @@ WIDTH = 320
 HEIGHT = 180
 
 TARGET_VIDEOS = {
-    # # review on 2020
-    # "b5VxEOiHvdY": {"player": "ponpoko", "unixtime": "1608613742"},
-    # # ponpoko in a pinch
-    # "Kbfrw9yFGx0": {"player": "ponpoko", "unixtime": "1597370406"},
-    # # ponpoko vs peanuts kun
-    # "IgBtOvlj2X8": {"player": "ponpoko", "unixtime": "1612070712"},
-    # # gachi
-    # "n8msiA8RNxg": {"player": "ponpoko", "unixtime": "1575162009"},
-    # # Season1/vol1
-    # "s-jGOeYdKt8": {"player": "peanuts_kun", "unixtime": "1499140878"},
-    # # virtuafreak live
-    # "_nXnvHit0R4": {"player": "peanuts_kun", "unixtime": "1619413214"},
-    # # gumi
-    # "9VhrJCbr58A": {"player": "peanuts_kun", "unixtime": "1592881215"},
-    # # tohpea 2020
-    # "BVC-dRCz-4A": {"player": "peanuts_kun", "unixtime": "1608876007"},
+    # review on 2020
+    "b5VxEOiHvdY": {"player": "ponpoko", "unixtime": "1608613742"},
+    # ponpoko in a pinch
+    "Kbfrw9yFGx0": {"player": "ponpoko", "unixtime": "1597370406"},
+    # ponpoko vs peanuts kun
+    "IgBtOvlj2X8": {"player": "ponpoko", "unixtime": "1612070712"},
+    # gachi
+    "n8msiA8RNxg": {"player": "ponpoko", "unixtime": "1575162009"},
+    # Season1/vol1
+    "s-jGOeYdKt8": {"player": "peanuts_kun", "unixtime": "1499140878"},
+    # virtuafreak live
+    "_nXnvHit0R4": {"player": "peanuts_kun", "unixtime": "1619413214"},
+    # gumi
+    "9VhrJCbr58A": {"player": "peanuts_kun", "unixtime": "1592881215"},
+    # tohpea 2020
+    "BVC-dRCz-4A": {"player": "peanuts_kun", "unixtime": "1608876007"},
     # demo
-    "p3nYromZQiQ": {"player": "ponpoko", "unixtime": "1520873861"},
+    # "p3nYromZQiQ": {"player": "ponpoko", "unixtime": "1520873861"},
 }
 
 
