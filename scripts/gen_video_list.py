@@ -5,21 +5,23 @@ import requests
 from entity import Playlist, YoutubeVideoItem
 from utils import getenv_or_error, write_to_json_file
 
+import typer
+
 # ************************************
 # const values / properties
 # **********************************/
-
-PLAYLIST = Playlist.PEANUTS_KUN
 
 API_ENDPOINT = "https://youtube.googleapis.com/youtube/v3/playlistItems"
 PART = "id,contentDetails,snippet,status"
 YOUTUBE_API_KEY = getenv_or_error("YOUTUBE_API_KEY")
 
 
+app = typer.Typer()
+
 # ************************************
 # functions
 # **********************************/
-def get_video_list(playlist: Playlist) -> List[YoutubeVideoItem]:
+def _get_video_list(playlist: Playlist) -> List[YoutubeVideoItem]:
     video_list: List[YoutubeVideoItem] = []
     page_token = ""
     sum = 0
@@ -51,15 +53,27 @@ def get_video_list(playlist: Playlist) -> List[YoutubeVideoItem]:
     return video_list
 
 
-# ************************************
-# main
-# **********************************/
-def main() -> None:
-    for playlist in Playlist:
-        list = get_video_list(playlist)
+@app.command()
+def gen_video_list(target: str):
+    if target == "ponpoko":
+        playlists = [Playlist.PONPOKO]
+    elif target == "emimiya":
+        playlists = [Playlist.EMIMIYA]
+    else:
+        raise Exception("invalid target is passed")
+
+    print(f"target: {target}. playlists: {playlists}")
+
+    for playlist in playlists:
+        list = _get_video_list(playlist)
         json_file_path = f"{os.path.dirname(__file__)}/../output/video_json/{playlist.player}/video_list.json"
         write_to_json_file(json_file_path, list)
 
 
+
+# ************************************
+# main
+# **********************************/
 if __name__ == "__main__":
-    main()
+    app()
+

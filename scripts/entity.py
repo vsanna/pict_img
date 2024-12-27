@@ -37,8 +37,14 @@ class PrimaryColor(Enum):
 
 
 class Playlist(Enum):
+    """
+    # How to find playlist_id:
+    1. get channel id: https://support.google.com/youtube/answer/3250431?hl=en&sjid=17154660641541136582-AP
+    2. replace the suffix: UC with UU
+    """
     PONPOKO = ("ponpoko", "UU1EB8moGYdkoZQfWHjh7Ivw")
     PEANUTS_KUN = ("peanuts_kun", "UUmgWMQkenFc72QnYkdxdoKA")
+    EMIMIYA = ("emimiya", "UU7nveTHQ4hYw8_xRrfeNUdw")
 
     def __init__(self, player: str, playlist_id: str):
         self.player = player
